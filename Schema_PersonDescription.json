@@ -1,0 +1,46 @@
+Schema_PersonDescription {
+  gender: one of
+    - man
+    - woman
+    - person          // use when gender is unclear
+
+  body_appearance: one of
+    - tall
+    - short
+    - thin
+    - fat
+    - medium
+    - null            // use when appearance is unclear or not confidently observable
+
+  clothing_type: one of
+    - hooded_jacket
+    - jacket
+    - shirt
+    - trousers
+    - shorts
+    - dress
+    - top_bottom      // use when upper and lower clothing are distinguishable but types are unclear
+    - clothing        // use when clothing parts cannot be distinguished
+
+  clothing_color: one of
+    - black
+    - white
+    - red
+    - blue
+    - green
+    - yellow
+    - dark_color
+    - bright_color
+
+  clothing_color_structure:
+    - single           // same color for entire clothing
+    - top_bottom       // different colors for top and bottom
+
+  carried_items: one of
+    - backpack
+    - handbag
+    - shoulder_bag
+    - plastic_bag
+    - object           // generic carried object
+    - null             // no visible carried item
+}
